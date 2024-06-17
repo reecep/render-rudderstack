@@ -10,7 +10,7 @@ services:
     dockerfilePath: ./backend/dockerfile
     dockerContext: ./backend
     healthCheckPath: /
-    plan: starter plus
+    plan: starter
     envVars:
       - key: PORT
         value: 8080
@@ -54,7 +54,7 @@ services:
     name: rudderstack-transformer
     dockerfilePath: ./transformer/dockerfile
     dockerContext: ./transformer
-    plan: starter plus
+    plan: starter
     envVars:
       - key: STATSD_SERVER_HOST
         fromService:
