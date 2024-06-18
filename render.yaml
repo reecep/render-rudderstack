@@ -2,6 +2,7 @@ databases:
   - name: rudderstack
     ipAllowList: []
     plan: standard
+    region: singapore
 
 services:
   - type: web
@@ -11,6 +12,7 @@ services:
     dockerContext: ./backend
     healthCheckPath: /
     plan: starter
+    region: singapore
     envVars:
       - key: PORT
         value: 8080
@@ -55,6 +57,7 @@ services:
     dockerfilePath: ./transformer/dockerfile
     dockerContext: ./transformer
     plan: starter
+    region: singapore
     envVars:
       - key: STATSD_SERVER_HOST
         fromService:
@@ -73,4 +76,5 @@ services:
     dockerfilePath: ./statsd/dockerfile
     dockerContext: ./statsd
     plan: starter
+    region: singapore
 
